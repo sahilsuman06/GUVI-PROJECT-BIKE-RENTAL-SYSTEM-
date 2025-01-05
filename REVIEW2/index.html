@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Rental System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Bike Rental System</h1>
+        <div class="card p-4">
+            <div class="mb-3">
+                <button class="btn btn-primary w-100" onclick="displayAvailableBikes()">Display Available Bikes</button>
+            </div>
+            <form id="rentForm">
+                <h4>Rent Bikes</h4>
+                <div class="mb-3">
+                    <label for="rentName" class="form-label">Your Name</label>
+                    <input type="text" id="rentName" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="rentCount" class="form-label">Number of Bikes</label>
+                    <input type="number" id="rentCount" class="form-control" min="1" required>
+                </div>
+                <button type="button" class="btn btn-success w-100" onclick="rentBikes()">Rent Bikes</button>
+            </form>
+            <hr>
+            <form id="returnForm">
+                <h4>Return Bikes</h4>
+                <div class="mb-3">
+                    <label for="returnName" class="form-label">Your Name</label>
+                    <input type="text" id="returnName" class="form-control" required>
+                </div>
+                <button type="button" class="btn btn-warning w-100" onclick="returnBikes()">Return Bikes</button>
+            </form>
+        </div>
+        <div id="output" class="mt-4"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
